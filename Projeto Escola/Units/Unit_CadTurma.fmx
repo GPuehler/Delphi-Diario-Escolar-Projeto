@@ -1,0 +1,143 @@
+object form_CadTurma: Tform_CadTurma
+  Left = 0
+  Top = 0
+  BorderStyle = Single
+  Caption = 'Cadastro de Turma'
+  ClientHeight = 199
+  ClientWidth = 391
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object sbtnNovo: TSpeedButton
+    StyledSettings = [Family, Style, FontColor]
+    Images = dm_BancoDados.ImageList1
+    ImageIndex = 0
+    Position.X = 103.000000000000000000
+    Position.Y = 129.000000000000000000
+    Size.Width = 61.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Novo'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.HorzAlign = Leading
+    OnClick = sbtnNovoClick
+  end
+  object sbtnSalvar: TSpeedButton
+    StyledSettings = [Family, Style, FontColor]
+    Images = dm_BancoDados.ImageList1
+    ImageIndex = 2
+    Position.X = 186.000000000000000000
+    Position.Y = 129.000000000000000000
+    Size.Width = 65.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Salvar'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.HorzAlign = Leading
+    OnClick = sbtnSalvarClick
+  end
+  object sbtnExcluir: TSpeedButton
+    StyledSettings = [Family, Style, FontColor]
+    Images = dm_BancoDados.ImageList1
+    ImageIndex = 0
+    Position.X = 271.000000000000000000
+    Position.Y = 129.000000000000000000
+    Size.Width = 68.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Excluir'
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.HorzAlign = Leading
+    OnClick = sbtnExcluirClick
+  end
+  object edTurma: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Position.X = 88.000000000000000000
+    Position.Y = 21.000000000000000000
+    Size.Width = 232.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object lbTurma: TLabel
+    Position.X = 38.000000000000000000
+    Position.Y = 23.000000000000000000
+    Size.Width = 45.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Turma: '
+    TabOrder = 6
+  end
+  object sbtnBusca: TSpeedButton
+    Images = dm_BancoDados.ImageList1
+    ImageIndex = 1
+    Position.X = 322.000000000000000000
+    Position.Y = 21.000000000000000000
+    Size.Width = 33.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'actiontoolbutton'
+    Text = 'sbtnBusca'
+    OnClick = sbtnBuscaClick
+  end
+  object lbDtInicio: TLabel
+    Position.X = 59.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 41.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'In'#237'cio: '
+    TabOrder = 3
+  end
+  object lbDtFim: TLabel
+    Position.X = 209.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 33.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Fim: '
+    TabOrder = 2
+  end
+  object dtInicio: TDateEdit
+    Date = 43959.000000000000000000
+    Position.X = 104.000000000000000000
+    Position.Y = 53.000000000000000000
+    Size.Width = 90.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+  end
+  object dtFim: TDateEdit
+    Date = 43959.000000000000000000
+    Position.X = 246.000000000000000000
+    Position.Y = 53.000000000000000000
+    Size.Width = 90.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+  end
+  object lbSemestre: TLabel
+    Position.X = 112.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 63.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Semestre: '
+    TabOrder = 5
+  end
+  object spSemestre: TSpinBox
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 11
+    Cursor = crIBeam
+    Position.X = 176.000000000000000000
+    Position.Y = 85.000000000000000000
+    Size.Width = 90.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    OnChange = spSemestreChange
+  end
+end

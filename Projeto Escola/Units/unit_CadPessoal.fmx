@@ -1,0 +1,322 @@
+object form_CadPessoa: Tform_CadPessoa
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = Single
+  Caption = 'Cadastro Pessoal'
+  ClientHeight = 315
+  ClientWidth = 655
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object lbICadastro: TListBoxItem
+    TextSettings.HorzAlign = Center
+    StyledSettings = [Family, Size, Style, FontColor]
+    Position.X = 2.000000000000000000
+    Position.Y = 20.000000000000000000
+    Size.Width = 647.000000000000000000
+    Size.Height = 285.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Panel1: TPanel
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 641.000000000000000000
+      Size.Height = 225.000000000000000000
+      Size.PlatformDefault = False
+      object dtDataNasc: TDateEdit
+        Date = 43917.000000000000000000
+        Position.X = 121.000000000000000000
+        Position.Y = 114.000000000000000000
+        Size.Width = 114.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+      end
+      object edCpf: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Position.X = 72.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 184.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        OnExit = edCpfExit
+      end
+      object edMatricula: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Position.X = 268.000000000000000000
+        Position.Y = 6.000000000000000000
+        Enabled = False
+        Size.Width = 56.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Matr'#237'cula:'
+        OnExit = edCpfExit
+      end
+      object edNome: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 67.000000000000000000
+        Position.Y = 75.000000000000000000
+        Size.Width = 190.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label4: TLabel
+        Position.X = 201.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Matr'#237'cula:'
+      end
+      object lbCPF: TLabel
+        Position.X = 22.000000000000000000
+        Position.Y = 40.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'CPF:'
+      end
+      object lbDataNasc: TLabel
+        Position.X = 15.000000000000000000
+        Position.Y = 116.000000000000000000
+        Size.Width = 103.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Data Nascimento:'
+      end
+      object lbNome: TLabel
+        Position.X = 22.000000000000000000
+        Position.Y = 77.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Nome:'
+      end
+      object sbtnBusca: TSpeedButton
+        Images = dm_BancoDados.ImageList1
+        ImageIndex = 1
+        Position.X = 336.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 35.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'actiontoolbutton'
+        Text = 'Matr'#237'cula:'
+        OnClick = sbtnBuscaClick
+      end
+      object btnAddFoto: TButton
+        Position.X = 531.000000000000000000
+        Position.Y = 123.000000000000000000
+        Size.Width = 101.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 9
+        Text = 'Carregar Foto'
+        OnClick = btnAddFotoClick
+      end
+      object imgFotoPerfil: TImage
+        MultiResBitmap = <
+          item
+          end>
+        MarginWrapMode = Fit
+        Position.X = 532.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 99.000000000000000000
+        Size.Height = 111.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object odFotoPerfil: TOpenDialog
+        Left = 581
+        Top = 71
+      end
+      object lbEmail: TLabel
+        Position.X = 282.000000000000000000
+        Position.Y = 39.000000000000000000
+        Size.Width = 39.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'E-mail:'
+        TabOrder = 13
+      end
+      object edEmail: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 3
+        Position.X = 330.000000000000000000
+        Position.Y = 37.000000000000000000
+        Size.Width = 197.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lbTelefone: TLabel
+        Position.X = 272.000000000000000000
+        Position.Y = 69.000000000000000000
+        Size.Width = 54.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Telefone:'
+        TabOrder = 8
+      end
+      object edTelefone: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 5
+        Position.X = 377.000000000000000000
+        Position.Y = 68.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object lbCelular: TLabel
+        Position.X = 279.000000000000000000
+        Position.Y = 103.000000000000000000
+        Size.Width = 43.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Celular:'
+        TabOrder = 14
+      end
+      object edCelular: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 7
+        Position.X = 377.000000000000000000
+        Position.Y = 101.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edDDDCel: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 6
+        Position.X = 329.000000000000000000
+        Position.Y = 101.000000000000000000
+        Size.Width = 37.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edDDDTel: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 4
+        Position.X = 329.000000000000000000
+        Position.Y = 67.000000000000000000
+        Size.Width = 37.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object cbTipo: TComboBox
+        Items.Strings = (
+          'Selecione o tipo'
+          'Professor'
+          'Aluno')
+        ItemIndex = 0
+        Position.X = 232.000000000000000000
+        Position.Y = 147.000000000000000000
+        Size.Width = 189.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 10
+        OnChange = cbTipoChange
+      end
+      object lbTipo: TLabel
+        Position.X = 193.000000000000000000
+        Position.Y = 152.000000000000000000
+        Size.Width = 34.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Tipo:'
+      end
+      object cbCurso: TComboBox
+        Items.Strings = (
+          'Selecione o curso')
+        ItemIndex = 0
+        Position.X = 108.000000000000000000
+        Position.Y = 179.000000000000000000
+        Size.Width = 189.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 11
+      end
+      object cbTurma: TComboBox
+        Items.Strings = (
+          'Selecione a turma')
+        ItemIndex = 0
+        Position.X = 365.000000000000000000
+        Position.Y = 179.000000000000000000
+        Size.Width = 188.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 12
+      end
+      object lbCurso: TLabel
+        Position.X = 62.000000000000000000
+        Position.Y = 184.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Curso:'
+      end
+      object lbTurma: TLabel
+        Position.X = 316.000000000000000000
+        Position.Y = 184.000000000000000000
+        Size.Width = 42.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Turma:'
+      end
+    end
+    object Panel2: TPanel
+      Position.X = 8.000000000000000000
+      Position.Y = 232.000000000000000000
+      Size.Width = 641.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      object sbtnExcluir: TSpeedButton
+        StyledSettings = [Family, Style, FontColor]
+        Images = dm_BancoDados.ImageList1
+        ImageIndex = 0
+        Position.X = 371.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 66.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Excluir'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.HorzAlign = Leading
+        OnClick = sbtnExcluirClick
+      end
+      object sbtnNovo: TSpeedButton
+        StyledSettings = [Family, Style, FontColor]
+        Images = dm_BancoDados.ImageList1
+        ImageIndex = 0
+        Position.X = 202.000000000000000000
+        Position.Y = 6.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Novo'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.HorzAlign = Leading
+        OnClick = sbtnNovoClick
+      end
+      object sbtnSalvar: TSpeedButton
+        StyledSettings = [Family, Style, FontColor]
+        Images = dm_BancoDados.ImageList1
+        ImageIndex = 2
+        Position.X = 284.000000000000000000
+        Position.Y = 7.000000000000000000
+        Size.Width = 63.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Salvar'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.HorzAlign = Leading
+        OnClick = sbtnSalvarClick
+      end
+    end
+  end
+end
